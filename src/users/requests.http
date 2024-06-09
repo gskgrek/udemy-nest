@@ -1,0 +1,40 @@
+### create new user
+POST http://localhost:3000/users/signup
+Content-Type: application/json
+
+{
+  "email": "nie@ma.pl",
+  "password": "admin123"
+}
+
+### single user
+GET http://localhost:3000/users/1
+
+### single user - not found
+GET http://localhost:3000/users/9999
+
+### find user
+GET http://localhost:3000/users?email=nie@ma.pl
+
+### remove user
+DELETE http://localhost:3000/users/2
+
+### remove user - not found
+DELETE http://localhost:3000/users/9999
+
+### update user
+PATCH  http://localhost:3000/users/1
+Content-Type: application/json
+
+{
+  "password": "admin1234"
+}
+
+### update user - not found
+PATCH  http://localhost:3000/users/9999
+Content-Type: application/json
+
+{
+  "password": "admin1234"
+}
+
